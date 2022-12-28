@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1 Funciones anidades</title>
+</head>
+<body>
+    <script>
+        function f1(x) {
+            function f2(y) {
+                document.write(`Parametro de la funcion exerior: ${x} <br>`);
+                document.write(`Parametro de la funcion: ${y} <br>`);
+                document.write(`Variable local de la funcion exterior: ${z} <br>`);
+            }
+            let z = 3;
+            f2(2);
+        }
+        f1(1);
+    </script>
+</body>
+</html>

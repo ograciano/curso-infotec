@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiniela</title>
+</head>
+<body>
+    <script>
+        class NumeroQuiniela {
+            constructor(nombre = '') {
+                this.nombre = nombre;
+                this.numero;
+            }
+
+            cargarNumero() {
+                this.numero = parseInt(prompt(`Que numero de quiniela quiere ${this.nombre}?`));
+            }
+
+            verificarSiGano(num) {
+                let sor;
+                console.log(this.numero, num);
+                (this.numero == num) ? sor = true : sor = false;
+                return sor;
+            }
+        }
+
+        class Bolillero {
+            constructor() {
+                this.numero = -1;
+            }
+
+            sortear(){
+               return this.numero = parseInt(Math.random()*10)+1;
+            }
+        }
+
+        let numeroQuiniela = new NumeroQuiniela('Oscar');
+        let bolillero = new Bolillero();
+        numeroQuiniela.cargarNumero();
+        
+        for (let i = 0; i < 10; i++) {
+            let verifica = numeroQuiniela.verificarSiGano(bolillero.sortear());
+            
+            if(verifica) 
+                document.write('Felicidades gano el sorteo ' + numeroQuiniela.numero + '<br>')
+            else document.write('Lo sentimos siga participando ' + bolillero.numero + '<br>');
+        }
+    </script>
+</body>
+</html>

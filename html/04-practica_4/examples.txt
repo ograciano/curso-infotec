@@ -1,0 +1,10 @@
+Oracle se asocia a NVIDIA para acelerar la adopción de la IA
+Oracle Cloud Infrastructure logra grandes mejoras de sus GPU con la pila completa de software y servicios de IA de NVIDIA.
+
+Oracle anuncia MySQL HeatWave Lakehouse
+Las adiciones a la cartera de bases de datos MySQL HeatWave permiten a los clientes procesar y consultar cientos de terabytes de datos en el almacén de objetos.
+
+Capacitaciones y certificaciones gratuitas en procesos de negocio
+Súmate a nuestros cursos de capacitación en soluciones empresariales y accede a una certificación reconocida globalmente. Gratis hasta el 4 de diciembre.
+
+

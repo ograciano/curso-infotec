@@ -1,0 +1,31 @@
+package com.example.demo;
+
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+
+import javax.swing.text.DateFormatter;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class AnimalesApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(AnimalesApplication.class, args);
+		
+		DateTimeFormatter formateador = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+		ArrayList<Animales> animales = new ArrayList<Animales>();
+		
+		
+		
+		for (int i = 1; i <= 10; i++) {
+			String hora = LocalDateTime.now().format(formatter);
+			Animales animal = new Animales(i, Animales.getRandmonAnimal());
+			System.out.println(Animales.getRandmonAnimal());
+			
+		}
+	}
+
+}

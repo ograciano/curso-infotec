@@ -1,0 +1,8 @@
+package com.cursoinfotec.listas;
+
+import org.springframework.stereotype.Controller;
+
+@Controller
+public class ListasTarea {
+	System.out.println('Holamundo');
+}

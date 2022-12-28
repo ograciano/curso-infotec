@@ -1,0 +1,23 @@
+package com.cursoinfotec;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class CursoInfotecApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(CursoInfotecApplication.class, args);
+		ArrayList<Double> numList = new ArrayList<Double>();
+		for(int i = 1; i <= 5; i++) {
+			numList.add(Math.random() * ((1000 - 1)) + 1);
+		}
+		Collections.sort(numList);
+		System.out.println(numList);
+	}
+
+}

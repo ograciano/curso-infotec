@@ -1,0 +1,17 @@
+package com.cursoinfotec;
+
+import java.time.LocalDateTime;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class TareaDateTimeApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(TareaDateTimeApplication.class, args);
+		LocalDateTime fecha = LocalDateTime.now();
+		System.out.println(fecha);
+	}
+
+}

@@ -1,0 +1,30 @@
+package com.cursoinfotec.ejemplo;
+
+import java.time.Duration;
+import java.time.LocalDateTime;import java.time.format.DateTimeFormatter;
+import java.util.Locale;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class TareaDateApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(TareaDateApplication.class, args);
+		
+		LocalDateTime fecha1 = LocalDateTime.now();
+		
+		DateTimeFormatter formateador = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+		
+		LocalDateTime fecha2 = fecha1.plusHours(5);
+		
+		System.out.println("Fecha 1 es: " + fecha1.format(formateador));
+		System.out.println("Fecha 2 es: " + fecha2.format(formateador));
+		
+		System.out.println(Duration.between(fecha1, fecha2));
+		
+		
+	}
+
+}

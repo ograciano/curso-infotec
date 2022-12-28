@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Evaluacion 1 y 2 unidad FrontEnd</title>
+  </head>
+  <body>
+    <h1>Evaluacion 1 y 2 unidad FrontEnd</h1>
+    <h2>Administracion de articulos</h2>
+    <table border="1">
+      <thead>
+        <th>Codigo</th>
+        <th>Descripcion</th>
+        <th>Precio</th>
+        <th>Borrar</th>
+        <th>Seleccionar</th>
+        <th>Ver</th>
+      </thead>
+      <tbody id="tabla"></tbody>
+      <tfoot>
+        <th>Codigo</th>
+        <th>Descripcion</th>
+        <th>Precio</th>
+        <th>Borrar</th>
+        <th>Seleccionar</th>
+        <th>Ver</th>
+      </tfoot>
+    </table>
+    <br />
+    <label for="codigo">Codigo: </label>
+    <input type="number" name="codigo" id="codigo" value="0" />
+    <br /><br />
+    <label for="desc">Descripcion: </label>
+    <input type="text" name="desc" id="desc" />
+    <br /><br />
+    <label for="precio">Precio: </label>
+    <input type="number" name="precio" id="precio" value="0" />
+    <br /><br />
+    <label for="imagen">Imagen: </label>
+    <input
+      type="text"
+      name="imagen"
+      id="imagen"
+      value="https://img.freepik.com/foto-gratis/manzanas-rojas-frescas-suaves-jugosas-enteras-perfectas-escritorio-blanco_179666-271.jpg"
+    />
+    <br /><br />
+    <input type="hidden" id="hidden" />
+    <button id="agregar">Agregar</button>
+    <button id="modificar">Modificar</button>
+  </body>
+  <script>
+    let objetoAlmacen = [];
+
+    let tabla = document.getElementById("tabla");
+    let codigo = document.getElementById("codigo");
+    let desc = document.getElementById("desc");
+    let precio = document.getElementById("precio");
+    let imagen = document.getElementById("imagen");
+    let agregar = document.getElementById("agregar");
+    let modificar = document.getElementById("modificar");
+    let hidden = document.getElementById("hidden");
+    let storage = localStorage;
+
+    const tablaAlmacen = () => {
+      let table = "";
+      tabla.innerHTML = "";
+      let almacen = [];
+      almacen = JSON.parse(storage.getItem("almacen"));
+      if (almacen != null) objetoAlmacen = almacen;
+      if (almacen == null) return;
+      for (const [i, producto] of almacen.entries()) {
+        table += "<tr>";
+        table += `<td>${producto.codigo}</td>`;
+        table += `<td>${producto.desc}</td>`;
+        table += `<td>${producto.precio}</td>`;
+        table += `<td><button onCLick='borrar(${i})'>Borrar?</button></td>`;
+        table += `<td><button onCLick='seleccionar(${i})'>Seleccionar?</Seleccionar></td>`;
+        table += `<td><button onCLick='ver(${i})'>ver?</Seleccionar></td>`;
+        table += "</tr>";
+      }
+
+      tabla.innerHTML = table;
+    };
+
+    const ver = (index) => {
+      const objeto = objetoAlmacen[index];
+      storage.setItem("producto", JSON.stringify(objeto));
+      window.location = "evaluacion2.html";
+    };
+
+    const limpiarObjeto = () => {
+      codigo.value = 0;
+      desc.value = "";
+      precio.value = 0;
+      codigo.disabled = false;
+    };
+
+    const agregarAlmacen = () => {
+      let objeto = {
+        codigo: codigo.value,
+        desc: desc.value,
+        precio: precio.value,
+        imagen: imagen.value,
+      };
+
+      if (objeto.codigo == 0 || objeto.codigo == "") {
+        alert(`el codigo ${objeto.codigo} no se puede ingresar`);
+        return;
+      }
+
+      for (const obj of objetoAlmacen) {
+        if (obj.codigo == objeto.codigo) {
+          alert(`el codigo ${objeto.codigo} ya existe`);
+          return;
+        }
+      }
+      objetoAlmacen.push(objeto);
+      storage.setItem("almacen", JSON.stringify(objetoAlmacen));
+      limpiarObjeto();
+      tablaAlmacen();
+    };
+
+    const modificarAlmacen = () => {
+      if (codigo.value == "" || codigo.value == 0) return;
+      objetoAlmacen[hidden.value].desc = desc.value;
+      objetoAlmacen[hidden.value].precio = precio.value;
+      objetoAlmacen[hidden.value].imagen = imagen.value;
+      storage.setItem("almacen", JSON.stringify(objetoAlmacen));
+      limpiarObjeto();
+      tablaAlmacen();
+    };
+
+    const borrar = (index) => {
+      if (confirm("Realmente desea eleminarlo")) objetoAlmacen.pop(index);
+      storage.setItem("almacen", JSON.stringify(objetoAlmacen));
+      tablaAlmacen();
+    };
+
+    const seleccionar = (index) => {
+      const objeto = objetoAlmacen[index];
+      codigo.disabled = true;
+      codigo.value = objeto.codigo;
+      desc.value = objeto.desc;
+      precio.value = objeto.precio;
+      imagen.value = objeto.imagen;
+      hidden.value = index;
+    };
+
+    tablaAlmacen();
+
+    agregar.addEventListener("click", agregarAlmacen);
+    modificar.addEventListener("click", modificarAlmacen);
+  </script>
+</html>

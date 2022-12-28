@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejericio Dias de la semana</title>
+  </head>
+  <body>
+    <button id="diasem">Ingresar dia de la semana</button><br />
+    <div id="laborable"></div>
+    <script>
+      document.write("Los dias de la semana so los siguientes: <br>");
+      let dias = [
+        "lunes",
+        "martes",
+        "miercoles",
+        "jueves",
+        "viernes",
+        "sabado",
+        "domingo",
+      ];
+      for (const [indice, dia] of dias.entries())
+        document.write(`${indice + 1}.- ${dia} <br>`);
+      let dia = "";
+      let button = document.getElementById("diasem");
+      let laborable = document.getElementById("laborable");
+
+      button.addEventListener("click", function () {
+        do {
+          dia = prompt(
+            'Ingresa un dia de la semana para saber si es laboral, para acabar ingresa "salir": '
+          );
+          if (dia.toLowerCase() == "sabado" || dia.toLowerCase() == "domingo")
+            laborable.innerHTML = `<h1>el dia ${dia} no es laborable</h1>`;
+          else laborable.innerHTML = `<h1>el dia ${dia} es laborable</h1>`;
+        } while (dia == "salir");
+      });
+    </script>
+  </body>
+</html>

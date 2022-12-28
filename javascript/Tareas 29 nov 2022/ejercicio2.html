@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2 JavaScript</title>
+</head>
+<body>
+    <div id="menu"></div>
+    <script>
+        class Menu {
+            constructor(){
+                this.enlaces = [];
+                this.descripcion = [];
+            }
+
+            insertar(enlace, descripcion) {
+                this.enlaces.push(enlace);
+                this.descripcion.push(descripcion);
+            }
+
+            mostrar(){
+                let cadena = '<div>';
+                for(let i in this.enlaces) cadena += `[<a href="${this.enlaces[i]}">${this.descripcion[i]}</a>]`;
+                cadena += '</div>';
+                document.getElementById('menu').innerHTML = cadena;
+            }
+        }
+
+        let menu = new Menu();
+        menu.insertar('http://google.com', 'Google');
+        menu.insertar('http://twitter.com', 'Twitter');
+        menu.insertar('http://facebook.com', 'Faebook');
+
+        menu.mostrar();
+    </script>
+</body>
+</html>

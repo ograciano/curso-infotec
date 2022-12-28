@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Ejemplo 4</title>
+</head>
+<body>
+    <h1>Formulario Ejemplo 4</h1>
+    <form action="enviarForm.php" method="post">
+        <fieldset>
+            <legend>Datos Generales</legend>
+            Nombre Completo:
+            <input type="text" name="nombre" placeholder="escriba el nombre" size="30"><br>
+            Mayor de Edad?
+            <input type="radio" checked value="SI" name="mayor">SI
+            <input type="radio" value="NO" name="mayor">NO <br>
+            Telefono:
+            <input type="text" name="telefono" value="+52" size="30"><br>
+            Comentarios:
+            <textarea name="comentarios" cols="30" rows="10"></textarea>
+        </fieldset>
+    </form>
+</body>
+</html>

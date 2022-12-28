@@ -1,0 +1,19 @@
+package com.cursoinfotec.ejemplo;
+
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class TareaDateApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(TareaDateApplication.class, args);
+		
+		String fecha1 = LocalDateTime.now().format(DateTimeFormatter.BASIC_ISO_DATE);
+		System.out.println(fecha1);
+	}
+
+}

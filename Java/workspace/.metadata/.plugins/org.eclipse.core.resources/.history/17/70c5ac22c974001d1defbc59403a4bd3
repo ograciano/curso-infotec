@@ -1,0 +1,25 @@
+package com.example.demo;
+
+public class Animales {
+	private int idAnimal;
+	public enum Animal {Leon, Gato, Perro, Venado, Elefante};
+	private Animal animal;
+	Animales(int idAnimal,  Animal animal) {
+		this.idAnimal = idAnimal;
+		this.animal = animal;
+	}
+	public int getIdAnimal() {
+		return idAnimal;
+	}
+	public void setIdAnimal(int idAnimal) {
+		this.idAnimal = idAnimal;
+	}
+	public Animal getAnimal() {
+		return animal;
+	}
+	public void setAnimal(Animal animal) {
+		this.animal = animal;
+	}
+	
+	
+}

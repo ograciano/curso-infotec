@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo Triangulos</title>
+</head>
+<body>
+    <script>
+        let conta1 = 0;
+        for (let f = 1; f <= 3; f++) {
+            let base = parseInt(prompt("Ingrese la base: "));       
+            let altura = parseInt(prompt("Ingrese la altura: "));
+            let superficie = base * altura/ 2;
+            if(superficie> 12) conta1++;
+            document.write("Triangulo nro: " + f + "<br>");     
+            document.write("Base:  " + base + "<br>");     
+            document.write("Altura:  " + altura + "<br>");     
+            document.write("Superficie:  " + superficie + "<br>");     
+        }
+
+        document.write("Canidad de triangulos con superficie ayor a 12: " + conta1);
+    </script>
+</body>
+</html>

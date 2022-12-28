@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejericio 1 javascript</title>
+  </head>
+  <body>
+    <script>
+      class Juego {
+        constructor(nombre, puntos) {
+          this.nombre = nombre;
+          this.puntos = puntos;
+        }
+
+        imprimir() {
+          document.write(
+            `${this.nombre} tiene la cantidad de: ${this.puntos} puntos <br>`
+          );
+        }
+
+        aumentarPuntos(puntos = 0) {
+          this.puntos += puntos;
+        }
+
+        verificarSiGano() {
+          this.puntos > 1000
+            ? document.write("Felicidades Gano el concurso <br>")
+            : document.write("Lo sentimos no tiene los puntos suficientes <br>");
+        }
+      }
+
+      let jugador1 = new Juego("Oscar", 100);
+      jugador1.verificarSiGano();
+      jugador1.imprimir();
+      jugador1.aumentarPuntos(800);
+      jugador1.verificarSiGano();
+      jugador1.imprimir();
+      jugador1.aumentarPuntos(101);
+      jugador1.verificarSiGano();
+      jugador1.imprimir();
+      
+    </script>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 1 JavaScript</title>
+  </head>
+  <body>
+    <script>
+      function cargarSueldos(sueldos = []) {
+        for (let i = 0; i < sueldos.length; i++) {
+          const element = sueldos[i];
+          let v = prompt("Ingrese sueldo: ");
+          sueldos[i] = parseInt(v);
+        }
+      }
+
+      function calcularGastos(sueldos = []) {
+        let total = 0;
+        for (let i = 0; i < sueldos.length; i++) {
+          total += sueldos[i];
+        }
+
+        document.write("Listtado de sueldos: <br");
+        for (let i = 0; i < sueldos.length; i++) {
+          document.write(sueldos[i] + "<br>");
+        }
+        document.write("total de gastos en sueldos: " + total);
+      }
+
+      let sueldos;
+      sueldos = new Array(5);
+      cargarSueldos(sueldos);
+      calcularGastos(sueldos);
+    </script>
+  </body>
+</html>

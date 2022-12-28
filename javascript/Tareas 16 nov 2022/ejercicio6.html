@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 6 parametros por defecto</title>
+</head>
+<body>
+    <script>
+        function generarLista(vec, tipo = "<ul>") {
+            let lista = tipo;
+            for (let i = 0; i < vec.length; i++) lista += `<li>${vec[i]}</li>`;
+            if(tipo == '<ul>') lista += '</ul>';
+            else lista += '</ol>';
+            return lista;
+        }
+
+        const opciones1 = ['opciones1','opciones2','opciones3','opciones4','opciones5'];
+        document.write(generarLista(opciones1));
+        const opciones2 = ['opciones a','opciones b','opciones c','opciones d','opciones e'];
+        document.write(generarLista(opciones2, '<ol>'));
+    </script>
+</body>
+</html>

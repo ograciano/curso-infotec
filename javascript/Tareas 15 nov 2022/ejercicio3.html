@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perimetro</title>
+</head>
+<body>
+    <h1>Calcular el prerimetro</h1>
+    <input type="text" id="perimetro" placeholder="ingresa un numero">
+    <button onclick="perimetro()">enviar</button>
+    <div id="res"></div>
+    <script>
+        let perimetroVal = document.getElementById('perimetro');
+        let respuesta = document.getElementById('res');
+        function perimetro() {
+           respuesta.innerHTML = 'EL perimetro es: ' + perimetroVal.value * 4; 
+        }
+    </script>
+</body>
+</html>

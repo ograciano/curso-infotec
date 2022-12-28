@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina Web HTML</title>
+</head>
+<body>
+    <h1>Pagina Seguimiento NFL</h1>
+    <a href="#titulares">Titulares</a><br>
+    <a href="#VideosRelaconados">Videos Relacionados</a><br>
+    <a href="#comentarios">comentarios</a><br>
+    <a href="#footer">Ligas Especializadas</a>
+
+    <a name="titulares"></a>
+    <h2>Titulares</h2>
+    <div id="titulares">
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Titular</th>
+                    <th>Descripcion</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><h3>NFL determinó que réferis no pidieron autógrafo de Mike Evans</h3></td>
+                    <td>
+                        <p>La interacción posterior al partido entre dos réferis y el receptor abierto de los Tampa Bay Buccaneers, Mike Evans, no involucró una solicitud de un autógrafo, indicó la NFL a través de un comunicado este martes.
+
+                        Luego de la derrota de los Buccaneers, 21-3 el domingo ante los Carolina Panthers, La 1340 AM Fox Sports capturó un video del juez lateral Jeff Lamberth y el juez de línea Tripp Sutter llamando a Evans. Después, Evans escribió algo en una tarjeta que le entregaron.
+                        
+                        Sin embargo, después de hablar con las personas involucradas, la liga determinó que Lamberth y Sutter no estaban pidiendo un autógrafo. La liga no especificó por qué llamaron a Evans ni qué se dijo durante la interacción. En respuesta a una pregunta posterior, un portavoz de la NFL dijo que la liga no tenía más detalles para compartir.
+                        
+                        "No estaba firmando mi autógrafo, les diré eso", señaló Evans a la prensa este martes. "Hablo con muchos oficiales, todos somos seres humanos. Es un buen tipo, así que estábamos hablando de golf. Eso es todo de lo que estábamos hablando".</p>
+                        <img src="https://a3.espncdn.com/combiner/i?img=%2Fphoto%2F2022%2F1025%2Fr1081315_1296x729_16%2D9.jpg&w=570&format=jpg" alt="">
+                    </td>
+                </tr>
+                <tr>
+                    <td><h3>Cowboys adquieren en canje al tackle defensivo Johnathan Hankins, según fuentes</h3></td>
+                    <td>
+                        <p>
+                            En un intento por reforzar su defensiva contra la carrera, los Dallas Cowboys adquirieron al tackle defensivo Johnathan Hankins y una selección de séptima ronda del draft del 2024 de Las Vegas Raiders a cambio de un turno en la sexta vuelta del sorteo del 2023 este martes, de acuerdo a múltiples fuentes.
+
+                            Los Cowboys han permitido 117 o más yardas terrestres en cinco de sus siete partidos esta temporada y se ubican en la posición N° 20 de la NFL en defensiva contra la carrera, permitiendo 4.4 yardas por acarreo.
+
+                            Si bien han registrado 29 capturas y han aceptado apenas 1,296 yardas aéreas netas, la menor cantidad de una defensiva de Dallas después de siete partidos desde el 2003, están programados para enfrentarse a cuatro ofensivas terrestres del top 10 en la actualidad en el resto de su calendario, sin incluir equipos con corredores estelares como Derrick Henry de los Tennessee Titans, Dalvin Cook de los Minnesota Vikings y Jonathan Taylor de los Indianapolis Colts.
+
+                            Hankins fue reclutado en la segunda ronda del draft del 2013 por los New York Giants.
+                        </p>
+                        <img src="https://a.espncdn.com/combiner/i?img=%2Fphoto%2F2022%2F1025%2Fr1081245_1296x729_16%2D9.jpg&w=570&format=jpg" alt="">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <a name="VideosRelaconados"></a>
+    <h2>Videos Relacionados</h2>
+    <div id="VideosRelaconados">
+        <table>
+            <tr>
+                <td>
+                    <iframe src="https://www.youtube.com/embed/RzlHzJkxQJA" width="490" height="315" allowfullscreen></iframe>
+                </td>
+                <td>
+                    <iframe src="https://www.youtube.com/embed/N4s2EK3PV3M" width="490" height="315" allowfullscreen></iframe>
+                </td>
+                <td>
+                    <iframe src="https://www.youtube.com/embed/EHA9T7MMSTU" width="490" height="315" allowfullscreen></iframe>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <a name="comentarios"></a>
+    <h2>Comentarios</h2>
+    <form action="enviarForm.php" method="post">
+        <fieldset>
+            <legend>Datos Generales</legend>
+            <input type="hidden" value="25/10/2022 10:30pm">
+            Nombre Completo:
+            <input type="text" name="nombre" placeholder="escriba el nombre" size="30"><br>
+            Mayor de Edad?
+            <input type="radio" checked value="SI" name="mayor">SI
+            <input type="radio" value="NO" name="mayor">NO <br>
+            Telefono:
+            <input type="text" name="telefono" value="+52" size="30"><br>
+            correo electronico:
+            <input type="email" name="email" placeholder="Escriba su correo"><br>
+            Comentarios:
+            <textarea name="comentarios" cols="30" rows="10"></textarea><br>
+            <button type="submit">Enviar</button>
+            <button type="reset">Borrar</button>
+        </fieldset>
+    </form>
+    <br>
+    <a name="footer"></a>
+    <footer>
+        ligas especializadas en Futbol americano
+        <table>
+            <tr>
+                <td><a href="https://espn.com.mx" target="_blank">ESPN</a></td>
+                <td><a href="https://www.youtube.com/channel/UCDVYQ4Zhbm3S2dlz7P1GBDg" target="_blank">Youtube NFL</a></td>
+                <td><a href="https://www.nfl.com/network/" target="_blank">NFL Network</a></td>
+            </tr>
+        </table>
+    </footer>
+</body>
+</html>

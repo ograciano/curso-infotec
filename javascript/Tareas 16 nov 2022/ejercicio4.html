@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nombre fucncion y paso por funcion</title>
+</head>
+<body>
+    <script>
+        function sumar(v1, v2){
+            return v1 + v2;
+        }
+        function restar(v1, v2){
+            return v1 - v2;
+        }
+        function calcular(x,y,fu) {
+            let resu = fu(x, y);
+            return resu;
+        }
+
+        let s1 = calcular(7,8, sumar);
+        document.write(s1 + '<br>');
+        let s2 = calcular(7,8, restar);
+        document.write(s2 + '<br>');
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+
+    <form action="archivoAction.php" method="post">
+        nombre completo:
+        <input type="text" name="nombre" placeholder="nombre" size="30"><br>
+        correo:
+        <input type="email" name="email" placeholder="correo" size="30"><br>
+        clave:
+        <input type="password" name="password" placeholder="clave" size="30"><br>
+        descripcion:
+        <textarea name="desc" cols="30" rows="10"></textarea><br>
+        Mas informacion
+        <input type="checkbox" value="SI" enabled>SI <br>
+        <input type="radio" value="no">NO <br>
+
+        <select name="pais">
+            <option value="Mex">México</option>
+            <option value="EUA">Estados Unidos</option>
+            <option value="ARG">Argentina</option>
+            <option value="URU">Urugay</option>
+            <option value="CHI">Chile</option>
+        </select>
+
+        <input type="submit" value="enviar"><br>
+        <input type="reset" value="borrar"><br>
+    </form>
+    
+</body>
+</html>

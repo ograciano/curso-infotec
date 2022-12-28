@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>paramaetro como funcion ejercicio 5</title>
+</head>
+<style>
+    .boton {
+        width: 50px;
+        height: 50px;
+    }
+
+    #resultado {
+        font-size: 40px;
+    }
+</style>
+<body>
+    <input type="button" name="boton0" id="boton0" value="1" class="boton">
+    <input type="button" name="boton1" id="boton1" value="2" class="boton">
+    <input type="button" name="boton2" id="boton2" value="3" class="boton">
+    <input type="button" name="boton3" id="boton3" value="4" class="boton">
+    <input type="button" name="boton4" id="boton4" value="5" class="boton">
+    <input type="button" name="boton5" id="boton5" value="6" class="boton">
+    <input type="button" name="boton6" id="boton6" value="7" class="boton">
+    <input type="button" name="boton7" id="boton7" value="8" class="boton">
+    <input type="button" name="boton8" id="boton8" value="9" class="boton">
+
+    <div id="resultado"></div>
+    <script>
+        for (let i = 0; i <= 9; i++) document.getElementById('boton'+i).addEventListener('click', presion);
+        function presion(evt) {
+            document.getElementById('resultado').innerHTML =
+            document.getElementById('resultado').innerHTML + evt.target.value;
+            
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio String JavaScript</title>
+</head>
+<body>
+    <script>
+        let cadena = prompt('Ingrese una cadena: ');
+        document.write('La cadena ingresada es: ' + cadena);
+        document.write('<br>');
+        document.write('La cantidad de caracteres son: ' + cadena.length);
+        document.write('<br>');
+        document.write('El primer caracter de la cadena es: ' + cadena.charAt(0));
+        document.write('<br>');
+        document.write('El ultimo caracter de la cadena es: ' + cadena.charAt(cadena.length - 1));
+        document.write('<br>');
+        document.write('Los primeros tre caracteres de la cadena son: ' + cadena.substring(0,3));
+        document.write('<br>');
+        cadena.indexOf('hola' != -1) ? document.write('Se ingreso la subcadena hola') : document.write('No ingreso la subcadena hola');
+        document.write('<br>');
+        document.write('La cadena comveritda a mayusculas es: '+ cadena.toUpperCase());
+        document.write('<br>');
+        document.write('La cadena comveritda a minusculas es: '+ cadena.toLowerCase());
+        document.write('<br>');
+
+
+
+    </script>
+</body>
+</html>

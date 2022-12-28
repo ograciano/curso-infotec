@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documento 2 Evaluacion JavaScript y HTML</title>
+</head>
+<body>
+    <h1>Evaluacion JavaScript y HTML</h1>
+    <img src="" alt="sin imagen" id="imagen">
+    <h2 id="producto"></h2>
+    <h3 id="precio"></h3>
+    <br><br>
+    <button onclick="regresar()">Regresar</button>
+    <script>
+     let storage = localStorage;
+     let imagen = document.getElementById('imagen');
+     let producto = document.getElementById('producto');
+     let precio = document.getElementById('precio');
+
+     let objeto = JSON.parse(storage.getItem('producto'));
+     imagen.src = objeto.imagen;
+     producto.innerHTML = objeto.desc;
+     precio.innerHTML = objeto.precio + " pesos";
+
+     const regresar = () => {
+        window.location = 'evaluacion.html';
+     }
+    </script>
+</body>
+</html>
